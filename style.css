@@ -1,28 +1,30 @@
-/* Final Stacky Bird-style UI for Cluck Quest */ :root { --bg-gradient: linear-gradient(to top, #ffd8cb, #ffb4a2); --panel-bg: #fff0e6; --accent-color: #ff6f61; --header-color: #d84315; --input-bg: #fffaf0; --button-hover: #ff8a65; --font-main: 'Fredoka One', 'Quicksand', sans-serif; }
+/* Premium Ultra-Chicken UI - Cluck Quest Supreme Edition 🐔✨ */ :root { --bg-gradient: linear-gradient(to bottom, #fff4ec, #ffe0f0); --panel-bg: #ffffffd8; --accent-color: #ff69b4; --accent-hover: #ff85c1; --border-color: #ffaad2; --font-main: 'Poppins', 'Fredoka One', sans-serif; --header-color: #ff4081; --input-bg: #fff8fc; --shadow: 0 12px 28px rgba(0, 0, 0, 0.15); }
 
 body { margin: 0; font-family: var(--font-main); background: var(--bg-gradient); color: #333; overflow: hidden; }
 
-#menu, #gameOverScreen, #shop { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--panel-bg); border-radius: 40px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2); padding: 40px; text-align: center; width: 90%; max-width: 420px; display: none; z-index: 10; border: 4px solid #ffab91; }
+#menu, #gameOverScreen, #shop { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--panel-bg); border-radius: 45px; box-shadow: var(--shadow); padding: 45px; text-align: center; width: 92%; max-width: 440px; display: none; z-index: 20; border: 4px solid var(--border-color); backdrop-filter: blur(12px); }
 
 #menu { display: block; }
 
-h1 { font-size: 40px; color: var(--header-color); display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 30px; }
+h1 { font-size: 42px; color: var(--header-color); display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 30px; letter-spacing: 1px; text-shadow: 1px 1px 4px rgba(255, 64, 129, 0.4); }
 
-h1::before { content: "🐣"; font-size: 40px; }
+h1::before { content: "👑🐔"; font-size: 40px; }
 
-input, select { width: 90%; padding: 14px; margin: 12px auto; border-radius: 14px; border: 2px solid #ff8a65; font-size: 18px; font-family: var(--font-main); background: var(--input-bg); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
+input, select { width: 90%; padding: 16px; margin: 14px auto; border-radius: 14px; border: 2px solid var(--border-color); font-size: 18px; font-family: var(--font-main); background: var(--input-bg); box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); transition: 0.3s ease; }
 
-button { padding: 14px 28px; margin: 14px; font-size: 18px; border-radius: 18px; border: none; background-color: var(--accent-color); color: white; font-weight: bold; cursor: pointer; box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); transition: all 0.2s ease-in-out; }
+input:focus, select:focus { border-color: var(--header-color); outline: none; }
 
-button:hover { transform: translateY(-3px); background-color: var(--button-hover); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
+button { padding: 16px 30px; margin: 16px; font-size: 18px; border-radius: 20px; border: none; background-color: var(--accent-color); color: white; font-weight: 600; cursor: pointer; box-shadow: var(--shadow); transition: all 0.25s ease; }
 
-#scoreboard { position: absolute; top: 12px; left: 12px; font-size: 20px; color: white; text-shadow: 1px 1px 5px #000; z-index: 10; display: flex; gap: 24px; background: rgba(0,0,0,0.25); padding: 8px 12px; border-radius: 10px; }
+button:hover { background-color: var(--accent-hover); transform: scale(1.05); box-shadow: 0 14px 28px rgba(255, 105, 180, 0.3); }
 
-#openShopBtn { position: absolute; top: 12px; right: 12px; font-size: 16px; padding: 10px 20px; background: #ffe8d5; color: #e65100; border: 2px solid #ff7043; border-radius: 14px; font-weight: bold; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); transition: all 0.2s; }
+#scoreboard { position: absolute; top: 12px; left: 12px; font-size: 20px; color: white; text-shadow: 1px 1px 6px #000; z-index: 15; display: flex; gap: 28px; background: rgba(0,0,0,0.25); padding: 10px 14px; border-radius: 14px; }
 
-#openShopBtn:hover { background: #ffd2ba; transform: scale(1.05); }
+#openShopBtn { position: absolute; top: 12px; right: 12px; font-size: 16px; padding: 12px 22px; background: #ffe6f2; color: #d81b60; border: 2px solid var(--accent-color); border-radius: 16px; font-weight: bold; box-shadow: 3px 3px 10px rgba(0,0,0,0.2); transition: all 0.2s; }
 
-#shop .buy-btn { display: block; margin: 12px auto; background: #ffd180; color: #333; font-weight: bold; border: 2px solid #ffa726; width: 80%; border-radius: 12px; padding: 12px 20px; font-size: 16px; transition: 0.2s ease; }
+#openShopBtn:hover { background: #ffcce6; transform: scale(1.05); }
 
-#shop .buy-btn:hover { background: #ffb74d; transform: scale(1.05); }
+#shop .buy-btn { display: block; margin: 14px auto; background: #ffd180; color: #222; font-weight: bold; border: 2px solid #ffb74d; width: 85%; border-radius: 14px; padding: 14px 22px; font-size: 16px; transition: all 0.2s ease; }
+
+#shop .buy-btn:hover { background: #ffb74d; transform: scale(1.04); }
 
