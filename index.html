@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cluck Quest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+</head>
+<body>
+  <div id="menu">
+    <h1>🐔 Cluck Quest</h1>
+    <input id="displayNameInput" type="text" placeholder="Enter your display name" />
+    <select id="skinSelect">
+      <option value="chicken_normal">Normal Chicken</option>
+      <option value="chicken_golden" disabled>Golden Chicken (20 coins)</option>
+      <option value="chicken_king" disabled>King Chicken (50 coins)</option>
+    </select>
+    <button id="startBtn">Start Game</button>
+    <button id="guestBtn">Play as Guest</button>
+  </div>
+  <div id="gameContainer"></div>
+  <div id="hud">
+    <span id="scoreDisplay">SCORE: 0</span>
+    <span id="coinsDisplay">COINS: 0</span>
+    <button id="openShopBtn">🛍️ Shop</button>
+  </div>
+  <div id="shop">
+    <h2>Shop</h2>
+    <p>Buy skins with coins you earn!</p>
+    <ul>
+      <li>Golden Chicken - 20 coins <button class="buy-btn" data-skin="chicken_golden" data-price="20">Buy</button></li>
+      <li>King Chicken - 50 coins <button class="buy-btn" data-skin="chicken_king" data-price="50">Buy</button></li>
+    </ul>
+    <button id="closeShopBtn">Close</button>
+  </div>
+  <div id="gameOverScreen">
+    <h1>Game Over 💀</h1>
+    <p id="finalScore"></p>
+    <button id="restartBtn">Restart</button>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
