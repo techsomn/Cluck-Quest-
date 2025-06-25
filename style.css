@@ -1,32 +1,28 @@
-/* SUPER BEAUTIFUL CHICKEN GAME UI - REBUILT */
+/* Final Stacky Bird-style UI for Cluck Quest */ :root { --bg-gradient: linear-gradient(to top, #ffd8cb, #ffb4a2); --panel-bg: #fff0e6; --accent-color: #ff6f61; --header-color: #d84315; --input-bg: #fffaf0; --button-hover: #ff8a65; --font-main: 'Fredoka One', 'Quicksand', sans-serif; }
 
-body { margin: 0; padding: 0; font-family: 'Press Start 2P', cursive; background: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%); color: #333; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 100vh; }
+body { margin: 0; font-family: var(--font-main); background: var(--bg-gradient); color: #333; overflow: hidden; }
 
-h1, h2, p { text-shadow: 2px 2px #fff; }
+#menu, #gameOverScreen, #shop { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--panel-bg); border-radius: 40px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2); padding: 40px; text-align: center; width: 90%; max-width: 420px; display: none; z-index: 10; border: 4px solid #ffab91; }
 
-#menu, #shop, #gameOverScreen { position: absolute; z-index: 10; background: rgba(255, 255, 255, 0.95); border: 4px solid #333; border-radius: 25px; padding: 25px; box-shadow: 0px 0px 20px rgba(0,0,0,0.3); animation: zoomIn 0.4s ease; text-align: center; }
+#menu { display: block; }
 
-#menu { top: 10%; width: 80%; max-width: 400px; }
+h1 { font-size: 40px; color: var(--header-color); display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 30px; }
 
-#hud { position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 12px 24px; background: rgba(0, 0, 0, 0.5); color: white; font-size: 1rem; z-index: 10; }
+h1::before { content: "🐣"; font-size: 40px; }
 
-#shop { top: 15%; width: 90%; max-width: 500px; display: none; }
+input, select { width: 90%; padding: 14px; margin: 12px auto; border-radius: 14px; border: 2px solid #ff8a65; font-size: 18px; font-family: var(--font-main); background: var(--input-bg); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); }
 
-#gameOverScreen { top: 20%; width: 80%; max-width: 400px; display: none; }
+button { padding: 14px 28px; margin: 14px; font-size: 18px; border-radius: 18px; border: none; background-color: var(--accent-color); color: white; font-weight: bold; cursor: pointer; box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); transition: all 0.2s ease-in-out; }
 
-#gameContainer { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; }
+button:hover { transform: translateY(-3px); background-color: var(--button-hover); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); }
 
-input, select, button { margin: 10px; padding: 12px 18px; font-size: 1rem; border: 2px solid #555; border-radius: 12px; background: #fff; transition: 0.3s; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
+#scoreboard { position: absolute; top: 12px; left: 12px; font-size: 20px; color: white; text-shadow: 1px 1px 5px #000; z-index: 10; display: flex; gap: 24px; background: rgba(0,0,0,0.25); padding: 8px 12px; border-radius: 10px; }
 
-button { background: #fcb69f; font-weight: bold; }
+#openShopBtn { position: absolute; top: 12px; right: 12px; font-size: 16px; padding: 10px 20px; background: #ffe8d5; color: #e65100; border: 2px solid #ff7043; border-radius: 14px; font-weight: bold; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); transition: all 0.2s; }
 
-button:hover { background: #ffecd2; cursor: pointer; }
+#openShopBtn:hover { background: #ffd2ba; transform: scale(1.05); }
 
-select:disabled { background: #ccc; color: #666; }
+#shop .buy-btn { display: block; margin: 12px auto; background: #ffd180; color: #333; font-weight: bold; border: 2px solid #ffa726; width: 80%; border-radius: 12px; padding: 12px 20px; font-size: 16px; transition: 0.2s ease; }
 
-ul { list-style: none; padding: 0; margin: 10px 0; text-align: left; }
-
-li { margin: 5px 0; }
-
-@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+#shop .buy-btn:hover { background: #ffb74d; transform: scale(1.05); }
 
