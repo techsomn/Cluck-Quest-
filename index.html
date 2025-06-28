@@ -2,45 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Cluck Quest 3000</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CluckQuest</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Main Menu -->
-  <div id="menu">
-    <h1>Cluck Quest</h1>
-    <button id="playBtn">▶️ Play</button>
-    <button id="openShopBtn">🛍️ Shop</button>
+  <div class="container">
+    <h1>🐤 CluckQuest</h1>
+    <p>Tap to flap your chicken and survive!</p>
+    <button id="startBtn">Start Game</button>
+    <button id="shopBtn">Shop 🛍️</button>
+    <canvas id="gameCanvas" width="320" height="240"></canvas>
   </div>
 
-  <!-- Game Area -->
-  <canvas id="gameCanvas"></canvas>
+  <div id="coinCounter">💰 0</div>
 
-  <!-- Scoreboard -->
-  <div id="scoreboard">
-    <span>Score: <span id="score">0</span></span>
-    <span>Coins: <span id="coins">0</span></span>
-    <span>LV: <span id="level">1</span></span>
+  <div id="shopContainer">
+    <strong>Choose your chicken:</strong>
+    <button class="skin-button" data-skin="normal" data-cost="0">Normal Chicken 🐤 (Free)</button>
+    <button class="skin-button" data-skin="gold" data-cost="5">Golden Chicken 💛 (5 Coins)</button>
+    <button class="skin-button" data-skin="king" data-cost="10">King Chicken 👑 (10 Coins)</button>
   </div>
 
-  <!-- Game Over Screen -->
-  <div id="gameOverScreen">
-    <h1>😵 Game Over</h1>
-    <button id="restartBtn">🔁 Restart</button>
-  </div>
-
-  <!-- Chicken Skin Shop -->
-  <div id="shop">
-    <h1>Chicken Skins</h1>
-    <button class="buy-btn" onclick="buySkin('normal', 0)">🐔 Normal (Free)</button>
-    <button class="buy-btn" onclick="buySkin('golden', 50)">✨ Golden (50 coins)</button>
-    <button class="buy-btn" onclick="buySkin('king', 150)">👑 King (150 coins)</button>
-    <button id="closeShopBtn">❌ Close Shop</button>
-  </div>
-
-  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
