@@ -1,7 +1,8 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(to top, #ffe08a, #ffd057);
+  background: linear-gradient(to top, #fff0c1, #ffcf81);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,30 +13,30 @@ body {
 
 .container {
   text-align: center;
+  z-index: 2;
 }
 
 h1 {
+  font-size: 2rem;
   color: #ff9900;
-  font-size: 1.8rem;
-  margin-bottom: 0.5em;
-  font-weight: bold;
+  margin-bottom: 0.3em;
 }
 
 p {
+  font-size: 1rem;
   color: #333;
   margin-bottom: 1em;
-  font-size: 1rem;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #ffdd57;
+  background: #ffcc00;
   border: none;
   border-radius: 12px;
+  padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
   box-shadow: 0 4px #c99e00;
-  margin: 0.25em;
+  margin: 0.3em;
 }
 
 button:active {
@@ -43,11 +44,12 @@ button:active {
   box-shadow: none;
 }
 
-canvas {
+#gameCanvas {
   display: none;
-  margin-top: 1.5em;
+  margin-top: 20px;
   background-color: #fff;
-  border: 2px solid #ffcc00;
+  border: 3px solid #ffcc00;
+  border-radius: 8px;
 }
 
 #coinCounter {
@@ -55,9 +57,10 @@ canvas {
   position: fixed;
   top: 10px;
   left: 10px;
-  font-size: 1.2rem;
   font-weight: bold;
+  font-size: 1.2rem;
   color: #333;
+  z-index: 3;
 }
 
 #shopContainer {
@@ -65,19 +68,21 @@ canvas {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: #fff4c2;
+  background: #fff9dd;
   padding: 1em;
   border: 2px solid #ffcc00;
   border-radius: 12px;
+  z-index: 10;
+  text-align: center;
 }
 
-.skin-button {
+.skin-btn {
   display: block;
   margin: 0.5em 0;
-  background: #ffd700;
-  border: 1px solid #b8860b;
-  padding: 0.5em;
+  padding: 10px;
+  background: #ffee88;
+  border: 1px solid #ccaa22;
+  border-radius: 8px;
+  font-size: 0.95rem;
   cursor: pointer;
-  border-radius: 6px;
-  font-size: 0.9rem;
 }
