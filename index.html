@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CluckQuest</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>🐤 CluckQuest</h1>
-    <p>Tap to flap your chicken and survive!</p>
+    <p>Tap to flap and collect coins!</p>
     <button id="startBtn">Start Game</button>
-    <button id="shopBtn">Shop 🛍️</button>
-    <canvas id="gameCanvas" width="320" height="240"></canvas>
+    <button id="shopBtn">Shop</button>
   </div>
 
   <div id="coinCounter">💰 0</div>
 
+  <canvas id="gameCanvas" width="320" height="240"></canvas>
+
   <div id="shopContainer">
-    <strong>Choose your chicken:</strong>
-    <button class="skin-button" data-skin="normal" data-cost="0">Normal Chicken 🐤 (Free)</button>
-    <button class="skin-button" data-skin="gold" data-cost="5">Golden Chicken 💛 (5 Coins)</button>
-    <button class="skin-button" data-skin="king" data-cost="10">King Chicken 👑 (10 Coins)</button>
+    <h2>Chicken Skins</h2>
+    <button class="skin-btn" data-skin="normal" data-cost="0">Normal 🐤 (Free)</button>
+    <button class="skin-btn" data-skin="gold" data-cost="5">Golden 💛 (5 coins)</button>
+    <button class="skin-btn" data-skin="king" data-cost="10">King 👑 (10 coins)</button>
   </div>
 
   <script src="script.js"></script>
