@@ -1,88 +1,22 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to top, #fff0c1, #ffcf81);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-}
+/* style.css */ body { font-family: 'Comic Sans MS', cursive, sans-serif; margin: 0; padding: 0; background: linear-gradient(to bottom, #89cff0, #fefbd8); color: #333; text-align: center; }
 
-.container {
-  text-align: center;
-  z-index: 2;
-}
+.hud { background-color: rgba(255, 255, 255, 0.9); padding: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999; }
 
-h1 {
-  font-size: 2rem;
-  color: #ff9900;
-  margin-bottom: 0.3em;
-}
+.stats { font-size: 1.3rem; margin-bottom: 1rem; }
 
-p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 1em;
-}
+button { padding: 12px 24px; font-size: 1rem; border: none; background-color: #ffca28; color: #222; border-radius: 8px; margin: 0.5rem; cursor: pointer; transition: 0.3s ease; }
 
-button {
-  background: #ffcc00;
-  border: none;
-  border-radius: 12px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 4px #c99e00;
-  margin: 0.3em;
-}
+button:hover { background-color: #ffd740; }
 
-button:active {
-  transform: translateY(2px);
-  box-shadow: none;
-}
+.chicken-pen { display: flex; flex-wrap: wrap; justify-content: center; padding: 2rem; }
 
-#gameCanvas {
-  display: none;
-  margin-top: 20px;
-  background-color: #fff;
-  border: 3px solid #ffcc00;
-  border-radius: 8px;
-}
+.chicken { width: 50px; height: 50px; background: url('https://i.imgur.com/Yy8eK1l.png') no-repeat center/contain; margin: 8px; }
 
-#coinCounter {
-  display: none;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #333;
-  z-index: 3;
-}
+.chicken.golden { background-image: url('https://i.imgur.com/I3X3p8S.png'); }
 
-#shopContainer {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #fff9dd;
-  padding: 1em;
-  border: 2px solid #ffcc00;
-  border-radius: 12px;
-  z-index: 10;
-  text-align: center;
-}
+.chicken.king { background-image: url('https://i.imgur.com/RkjZojJ.png'); }
 
-.skin-btn {
-  display: block;
-  margin: 0.5em 0;
-  padding: 10px;
-  background: #ffee88;
-  border: 1px solid #ccaa22;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
+.shop { background-color: #fff3cd; padding: 2rem; margin: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+.shop h2 { margin-top: 0; }
+
